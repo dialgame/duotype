@@ -6,9 +6,11 @@ public class InteractController : MonoBehaviour
 {
     public bool isOpen;
     public SpriteRenderer sr;
+    
 
     private void Start()
     {
+        
         sr = GetComponent<SpriteRenderer>();
     }
 
@@ -18,7 +20,9 @@ public class InteractController : MonoBehaviour
         {
             isOpen = true;
             sr.color = Color.green;
+            
             Debug.Log("Chest is open");
+
         }
     }
 }

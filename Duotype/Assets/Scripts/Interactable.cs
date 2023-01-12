@@ -8,11 +8,12 @@ public class Interactable : MonoBehaviour
     public bool isInRange;
     public KeyCode interactKey;
     public UnityEvent interactAction;
+    public GameObject Text;
 
     // Start is called before the first frame update
     void Start()
     {
-        
+        Text.SetActive(false);
     }
 
     // Update is called once per frame
@@ -34,6 +35,7 @@ public class Interactable : MonoBehaviour
         if (collision.gameObject.CompareTag("Player"))
         {
             isInRange = true;
+            Text.SetActive(true);
             Debug.Log("Player is in range");
         }
     }
@@ -41,6 +43,7 @@ public class Interactable : MonoBehaviour
     private void OnTriggerExit2D(Collider2D collision)
     {
         isInRange = false;
+        Text.SetActive(false);
         Debug.Log("Player is not in range");
     }
 }
