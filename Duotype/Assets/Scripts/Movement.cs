@@ -8,7 +8,7 @@ public class Movement : MonoBehaviour
 {
     private float horizontal;
     private float vertical;
-    private float speed = 8f;
+    public float speed = 8f;
     private float jumpingPower = 16f;
     
 

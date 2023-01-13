@@ -22,7 +22,8 @@ public class InteractController : MonoBehaviour
             sr.color = Color.green;
             
             Debug.Log("Chest is open");
-
         }
     }
+
+    
 }
